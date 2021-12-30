@@ -1,0 +1,39 @@
+﻿h1{
+	text-align:center;
+	color:white;
+}
+#game_initializer{
+	text-align:center;
+	
+
+	
+}
+#do_move{
+	text-align:center;
+}
+
+cards_table TD{
+border:1px solid black;
+table-layout:auto;
+text-align:center;
+width:5em;
+height:5em;
+
+
+}
+
+cards_table {
+border-collapse:collapse;
+
+}
+
+body{
+	background-color:#139213;
+	background-size:cover;
+	
+	background-attachment:fixed;
+}
+
+p{
+	color:white;	
+}
