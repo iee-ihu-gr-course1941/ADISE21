@@ -53,7 +53,7 @@ function read_board2(){
 global $mysqli;
 
 
-$sql = "SELECT * FROM cards_board ";
+	$sql = "SELECT * FROM cards_board ";
 	$st = $mysqli->prepare($sql);
 	$st->execute();
 	$res = $st->get_result();

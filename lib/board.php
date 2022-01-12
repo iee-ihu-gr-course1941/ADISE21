@@ -74,11 +74,7 @@ function show_board($input) {
 	}
 }
 
-function reset_board() {
-	global $mysqli;
-	$sql = 'call clean_cards_board()';
-	$mysqli->query($sql);
-}
+
 function suffle(){
 
 	$m = 0;
@@ -108,6 +104,13 @@ function suffle(){
 	}
 	
 	      }
+		  
+ function reset_board() {
+	global $mysqli;
+	$sql = 'call clean_cards_board()';
+	$mysqli->query($sql);
+}
+
 
 function read_board() {
 	
@@ -115,7 +118,6 @@ function read_board() {
 	global $mysqli;
 	
     suffle();
-    
    
 	$sql = 'select * from cards_board';
 	$st = $mysqli->prepare($sql);
@@ -140,6 +142,7 @@ function show_board_by_player($b) {
 	$orig_board=read_board();
 	$board=convert_board($orig_board);
 	$status = read_status();
+	
 	if($status['status']=='started' && $status['p_turn']==$b && $b!=null) {
 		// It my turn !!!!
 		$n = add_valid_moves_to_board($board,$b);

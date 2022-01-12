@@ -14,8 +14,8 @@ $(function(){
     $('#do_move').click(do_move);
 	$('#move_div').hide();
 	game_status_update();
-	//$('#the_move_src').change( update_moves_selector);
-	//$('#do_move2').click( do_move2);
+	//('#the_move_src').change( update_moves_selector);
+	//('#do_move2').click( do_move2);
 });
 
 function draw_empty_board(p) {
@@ -46,11 +46,14 @@ $.ajax({url: "cards_board.php/board/",headers: {"X-Token": me.token}, success: f
 
 }
 function reset_board(){
-$.ajax({url: "cards_board.php/board/",headers: {"X-Token": me.token}, method:'POST', success: fill_board_by_data});	
-$('#move_div').hide();
-$('#game_initializer').show(2000);
+	side +=null;
+	$.ajax({url: "cards_board.php/board/",headers: {"X-Token": me.token},method :'POST',success: fill_board_by_data});
+	$('#move_div').hide();
+	$('#game_initializer').show(2000);
+	}
 
-}
+
+
 function fill_board2(){
 	$.ajax({url: "data.php/board/",headers: {"X-Token": me.token}, success: fill_board_by_data});
 	
@@ -75,6 +78,8 @@ var im2 = (o.piece!=null)?'<img class="piece '+pc+'" Style="width:100px;height:2
     if(o.piece_color == 'D'){		
 	var im = (o.piece!=null)?'<img class="piece '+pc+'" Style="width:100px;height:200px;padding:5px;" src="images/imgs'+c+'.png">':'';
 	$(id).addClass().html(im);
+	
+		
 	}
 	else{
 	var img1 = '<img class="piece '+pc+'" Style="width:100px;height:200px;padding:5px;" src="images/imgs'+0+'.png">';
@@ -95,6 +100,7 @@ var im2 = (o.piece!=null)?'<img class="piece '+pc+'" Style="width:100px;height:2
 	var img1 = '<img class="piece '+pc+'" Style="width:100px;height:200px;padding:5px;" src="images/imgs'+0+'.png">';
 	$(id).addClass().html(img1);
 	}
+	
 
 $(id2).addClass().html(im2);
 
@@ -162,7 +168,7 @@ function update_status(data){
 	if(game_status.p_turn == me.piece_color && me.piece_color != null){
 		x = 0;
 		if(game_stat_old.p_turn!=game_status.p_turn) {
-			fill_board();
+			fill_board2();
 		}
 	$('#move_div').show(1000);
 	 timer = setTimeout(function () {

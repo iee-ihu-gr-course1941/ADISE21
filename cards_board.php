@@ -53,7 +53,7 @@ function handle_board($method,$input){
 if($method == 'GET'){
 	show_board($input);
 }
-else if ($method == 'POST'){
+else if($method == 'POST'){
 	reset_board();
 	show_board($input);
 }
