@@ -15,7 +15,7 @@
          * [Status](#status)
               * [Ανάγνωση κατάστασης παιχνιδιού](#ανάγνωση-κατάστασης-παιχνιδιού)
          * [players](#players)         
-	      * [Καταχώρηση/Είσοδος στο παιχνίδι](#Καταχώρηση/Είσοδος-στο-παιχνίδι)  
+	      * [Καταχώρηση/Είσοδος στο παιχνίδι](#Καταχώρηση-Είσοδος-στο-παιχνίδι)  
        * [Entities](#entities)
          * [cards_board](#cards_board-1)
          * [cards_players](#cards_players)
@@ -151,7 +151,7 @@ GET /status/
 ```
 insert /idplayers/firstname/lastname/email/username/password
 ```
-
+Κάνει insert στην βάση μας τα στοιχεία του παίχτη και μετά μας ζητάει να κάνουμε είσοδο στο παιχνίδι με αυτά.
 ## Entities
 
 
