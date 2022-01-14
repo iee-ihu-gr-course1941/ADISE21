@@ -15,10 +15,9 @@
          * [Status](#status)
               * [Ανάγνωση κατάστασης παιχνιδιού](#ανάγνωση-κατάστασης-παιχνιδιού)
          * [players](#players)         
-                 
 		 * [Καταχώρηση/Είσοδος στο παιχνίδι](#Καταχώρηση/Είσοδος στο παιχνίδι) 
 		 
-              * [Entities](#entities)
+       * [Entities](#entities)
          * [cards_board](#cards_board-1)
          * [cards_players](#cards_players)
          * [Game_status](#game_status)
