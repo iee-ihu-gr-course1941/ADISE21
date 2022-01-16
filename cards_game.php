@@ -20,6 +20,7 @@
 <meta name="viewport" content="width = device-width,initial-scale= 1">
 <meta name= "description" content="">
 <meta name="author" content= "">
+
 <title>cards_game</title>
 
 <link href="bootstrap-5.1.3-dist/css/bootstrap.min.css" rel="stylesheet">
@@ -28,6 +29,7 @@
 <script src="bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
 <script src="js/cards_jc.js"></script>
 <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+
 
 </head>
 
@@ -40,9 +42,9 @@
   	<div class="header">
  <?php  
  
+ //<link href="jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet"> 
  if (isset($_SESSION['txt44'])){
-  //
-//<link href="jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet"> 
+
    require_once "lib/dbconnect.php";
      
     $username = $_SESSION['txt44'];
@@ -70,11 +72,11 @@
 	<button id='cards_login' >Είσοδος στο Παιχνίδι</button>
 	</div>
 	<br></br>
-	<div id='game_info'>
-
+	<div id='game_info' style='color:white;text-align:center;'>
+     
 	</div>
 	<br></br>
-	 <div id="move_div">
+	 <div id='move_div'>
     <input id='the_move'><button id='do_move' class='btn btn-primary'>ΚΑΝΕ ΤΗΝ ΚΙΝΗΣΗ</button><br>
 	Δώσε κίνηση (x1 y1): <input id='the_move_src'> (x2 y2):
 	<select id='the_move_dest'></select>

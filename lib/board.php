@@ -42,7 +42,7 @@ function move_piece($x,$y,$x2,$y2,$token) {
 		print json_encode(['errormesg'=>"It is not your turn."]);
 		exit;
 	}
-	//elenxos gia to an mporei na kounisi to sugkekrimeno piouli
+	
 	$orig_board=read_board();
 	$board=convert_board($orig_board);
 	$n = add_valid_moves_to_piece($board,$color,$x,$y);

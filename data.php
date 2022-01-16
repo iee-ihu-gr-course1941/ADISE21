@@ -30,8 +30,8 @@ if($method == 'GET'){
 	show_board2($input);
 }
 else if ($method == 'POST'){
-	reset_board();
-	show_board($input);
+	reset_board2();
+	show_board2($input);
 }
 else{
 	header('HTTP/1.1 405 Method Not Allowed');
@@ -53,7 +53,7 @@ function read_board2(){
 global $mysqli;
 
 
-	$sql = "SELECT * FROM cards_board ";
+	$sql = 'SELECT * FROM cards_board ';
 	$st = $mysqli->prepare($sql);
 	$st->execute();
 	$res = $st->get_result();
@@ -61,6 +61,12 @@ global $mysqli;
 
 
 }
+function reset_board2() {
+	global $mysqli;
+	$sql = 'call clean_cards_board()';
+	$mysqli->query($sql);
+}
+
 function convert_board(&$orig_board) {
 	$board=[];
 	foreach($orig_board as $i=>&$row) {
